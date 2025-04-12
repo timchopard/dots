@@ -1,0 +1,21 @@
+# General aliases
+alias la='ls -a '
+
+# Python aliases
+alias newvenv='python3.13 -m venv .venv && source .venv/bin/activate'
+alias actvenv='source .venv/bin/activate'
+
+# Starship
+eval "$(starship init bash)"
+
+# App Aliases
+alias godot='~/.local/bin/Godot/Godot'
+alias blender='~/.local/bin/Blender/blender'
+alias nvim='~/.local/bin/nvim.appimage'
+
+alias sshcb2="ssh ubuntu@140.238.175.101 -i ~/.ssh/cb2"
+
+function md() {
+    pandoc $1 > /tmp/$1.html
+    xdg-open /tmp/$1.html
+}
